@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homepage with Floating Navbar</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('b2.gif') center/cover fixed;
+    transition: background 0.3s;
+    
+  }
+  a{
+
+color: 
+#F71308  }
+
+  .navbar {
+    position: fixed;
+    top: 1.2%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(4, 48, 110, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .navbar li {
+    margin: 0 10px;
+  }
+
+  .navbar li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .navbar li a:hover {
+    background-color: #000000;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 40px;
+    max-width: 100%;
+    margin: 80px auto 20px;
+    margin-left:20px;
+    margin-right:20px;
+    padding: 0px;
+  }
+
+  .card {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    perspective: 100px;
+  }
+
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+    transform-style: preserve-3d;
+  }
+
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-left:10px;
+    backface-visibility: hidden;
+  }
+
+  .card-front {
+    background-color: #04306E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-back {
+    background-color: #04306E;
+    transform: rotateY(180deg);
+    display: flex;
+    margin-left:10px;76
+    justify-content: center;
+    align-items: center;
+    color: #E3ECED;
+  }
+
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .menu-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(4, 48, 110, 0.7);
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .menu-button i {
+    font-size: 24px;
+  }
+
+  .menu-options {
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    left: 20px;
+    background-color: rgba(4, 48, 110, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    color:#E3ECED;
+  }
+
+  .menu-options ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-options li {
+    margin: 5px 0;
+  }
+
+  .menu-options li a {
+    text-decoration: none;
+    color: #E3ECED;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .menu-options li a:hover {
+    background-color: #000000;
+  }
+
+  .toggle-theme {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: url('bgf.avif') center/cover fixed;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .toggle-theme i {
+    font-size: 24px;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <ul>
+    <li><a href="#">Licenses & Certifications</a></li>
+    <!---<li><a href="#">Tab 2</a></li>-
+    <li><a href="#">Tab 3</a></li>
+    <li><a href="#">Tab 4</a></li>-->
+  </ul>
+</div>
+
+<div class="grid-container">
+  <!-- Repeat this block for each flip card -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-face card-front">
+        <img src="certificates\1.png" alt="Image 1">
+      </div>
+      <div class="card-face card-back">
+        <p>
+          <b>&nbsp;&nbsp;Build an Azure AI Vision solution
+<br>
+&nbsp;&nbsp;Microsoft</b><br><br>
+&nbsp;&nbsp;<b>Issued : </b>Feb 2024<br>
+&nbsp;&nbsp;<b>Credential ID </b>2AC794F73D2F638F<br>
+&nbsp;&nbsp;<b>Skills:</b> Artificial Intelligence (AI)<br>
+&nbsp;&nbsp;<a href="https://learn.microsoft.com/en-us/users/anmolratansrivastava-7289/credentials/applied-skill/build-azure-ai-vision-solution" color="blue"><b>Show credential</b>
+</a> </p>
+      </div>
+    </div>
+  </div>
+  <!-- Repeat end -->
+
+
+  <!-- Repeat this block for each flip card -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-face card-front">
+        <img src="certificates\3.png" alt="Image 2">
+      </div>
+      <div class="card-face card-back">
+        <p>
+       <b>
+        &nbsp;&nbsp;Machine Learning Foundations: A Case Study Approach
+<br>&nbsp;&nbsp;University of Washington<br>
+&nbsp;&nbsp;Issued:</b> May 2023
+<br>&nbsp;&nbsp;Credential ID W77BMCWT293GCredential ID W77BMCWT293G
+<br>&nbsp;&nbsp;Skills: Machine LearningSkills: Machine Learning
+<br>&nbsp;&nbsp;<a href="https://www.coursera.org/account/accomplishments/certificate/W77BMCWT293G" color="blue">Show credential</a>
+
+
+
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Repeat end -->
+  <!-- Repeat this block for each flip card -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-face card-front">
+        <img src="certificates/2.png" alt="Image 3" width="80%" height="60%">
+      </div>
+      <div class="card-face card-back">
+        <p>
+          <b>&nbsp;&nbsp;Create an intelligent document processing solution with Azure AI 
+<br>&nbsp;&nbsp;Microsoft<br>
+&nbsp;&nbsp;Issued:</b> Feb 2024<br>
+&nbsp;&nbsp;Credential ID 8AAF2A3DE46027F0Credential ID 8AAF2A3DE46027F0<br>
+<b>&nbsp;&nbsp;<a href="https://learn.microsoft.com/en-us/users/anmolratansrivastava-7289/credentials/applied-skill/create-intelligent-document-solution-azure-ai" color="blue">Show credential</a></b>
+
+
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Repeat end -->
+  <!-- Repeat this block for each flip card -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-face card-front">
+        <img src="certificates\4.png" alt="Image 4">
+      </div>
+      <div class="card-face card-back">
+        <p>
+          <b>
+            &nbsp;&nbsp;Building AI Powered Chatbots Without Programming
+            <br>&nbsp;&nbsp;IBM<br><br>
+            &nbsp;&nbsp;Issued: </b> Mar 2023<br>
+            &nbsp;&nbsp;Credential ID AM5XSR24SSV6Credential ID AM5XSR24SSV6
+
+            
+            <br>&nbsp;&nbsp;
+<a href="https://www.coursera.org/account/accomplishments/certificate/AM5XSR24SSV6" color="blue"><b>Show credential</b>
+</a> </p>
+      </div>
+    </div>
+  </div>
+  <!-- Repeat end -->
+
+
+  <!-- Repeat this block for each flip card -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-face card-front">
+        <img src="certificates/5.png" alt="Image 5">
+      </div>
+      <div class="card-face card-back">
+        <p><b>&nbsp;&nbsp;Basic Data Descriptors, Statistical Distributions, and Application to Business Decisions
+          <br>&nbsp;&nbsp;Coursera<br>
+          &nbsp;&nbsp;Issued:</b> Oct 2022<br>
+          &nbsp;&nbsp;Credential ID 538TPHAUDXZKCredential ID 538TPHAUDXZK
+          <br>&nbsp;&nbsp;Skills: Machine LearningSkills: Machine Learning
+          
+          <br>&nbsp;&nbsp;
+<a href="https://www.coursera.org/account/accomplishments/certificate/538TPHAUDXZKhttps://www.coursera.org/account/accomplishments/certificate/538TPHAUDXZK" color="blue"><b>Show credential</b>
+</a>
+      </div>
+    </div>
+  </div>
+  <!-- Repeat end -->
+
+
+  <!-- Repeat this block for each flip card -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-face card-front">
+        <img src="certificates\6.png" alt="Image 6">
+      </div>
+      <div class="card-face card-back">
+        <p><b>
+Getting satarted with ai using ibm watson
+<br>IBM<br>
+Issued: </b> Sep 2022<br>
+Credential ID 867T9B9MQGZ4Credential ID 867T9B9MQGZ4
+<br>
+Skills: Artificial Intelligence (AI)<br>
+<a href="https://www.coursera.org/account/accomplishments/certificate/867T9B9MQGZ4" color="blue"><b>Show credential</b>
+</a>
+
+
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Repeat end -->
+
+
+  <!-- Repeat this block for each flip card -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-face card-front">
+        <img src="certificates\7.png" alt="Image 7">
+      </div>
+      <div class="card-face card-back">
+        <p>
+          <b>
+Problem Solving<br> 
+HackerRank<br>
+Issued:</b> Sep 2022<br>
+Credential ID 91ad673b7b2dCredential ID 91ad673b7b2d
+<br>
+Skills: Problem Solving<br>
+<a href="https://www.hackerrank.com/certificates/91ad673b7b2d" color="blue"><b>Show credential</b>
+</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Repeat end -->
+
+
+  <!-- Repeat this block for each flip card -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-face card-front">
+        <img src="" alt="Image">
+      </div>
+      <div class="card-face card-back">
+        <p><b>
+          Demystifying AI/ML/DL<br>
+          Amazon Web Services (AWS)<br>
+          Issued: </b>Aug 2022<br>
+          Credential ID E-P0YMX0 3Credential ID E-P0YMX0 3
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Repeat end -->
+
+
+  <!-- Repeat this block for each flip card -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-face card-front">
+        <img src="certificates\10.png" alt="Image 7">
+      </div>
+      <div class="card-face card-back">
+        <p>
+          <b>
+                     Kivy ProjectsKivy Projects<br>
+            Great Learning<br>
+            Issued:</b> Jul 2022<br>
+            Credential ID 1964548/65962Credential ID 1964548/65962
+            <br>
+            Skills: Kivy
+            
+            
+<br>
+<a href="https://olympus.mygreatlearning.com/courses/65962/certificate" color="blue"><b>Show credential</b>
+</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Repeat end -->
+
+
+  <!-- Repeat this block for each flip card -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-face card-front">
+        <img src="" alt="Image 7">
+      </div>
+      <div class="card-face card-back">
+        <p>
+          <b>
+            MACHINE LEARNING ESSENTIAL FOR BUSINESS AND TECHNICAL DECISION MAKERS
+            <br>Amazon Web Services (AWS)<br>
+            Issued:</b> Jun 2022<br>
+            Credential ID E-0236LVCredential ID E-0236LV<br>
+            Skills: Machine Learning
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Repeat end -->
+
+
+
+
+  <!-- Repeat this block for each flip card -->
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-face card-front">
+        <img src="" alt="Image 7">
+      </div>
+      <div class="card-face card-back">
+        <p>
+          <b>Math for Machine Learning <br>
+            Amazon Web Services (AWS)<br>
+            Issued:</b> Jun 2022<br>
+            Credential ID E-GVPJXVCredential ID E-GVPJXV
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Repeat end -->
+
+
+
+    <!-- Repeat this block for each flip card -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="certificates\13.png" alt="Image 7">
+        </div>
+        <div class="card-face card-back">
+          <p>
+            <b>
+              Introduction to Artificial Intelligence ai
+              <br>Coursera<br>
+Issued:</b> May 2022<br>
+Credential ID J6R3DZ53FFMSCredential ID J6R3DZ53FFMS
+<br>
+
+
+              <br>
+  <a href="https://www.coursera.org/account/accomplishments/certificate/J6R3DZ53FFMS" color="blue"><b>Show credential</b>
+  </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat end -->
+
+
+
+    
+
+
+    <!-- Repeat this block for each flip card -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="certificates\14.png" alt="Image 7">
+        </div>
+        <div class="card-face card-back">
+          <p>
+            <b>
+              Python for data science.Ai and development 
+<br>IBM<br>
+Issued:</b> May 2022<br>
+Credential ID UAE29Y6YDXWBCredential ID UAE29Y6YDXWB
+<br>
+Skills: Data Structures
+
+
+              <br>
+  <a href="https://www.coursera.org/account/accomplishments/certificate/UAE29Y6YDXWB" color="blue"><b>Show credential</b>
+  </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat end -->
+
+
+    <!-- Repeat this block for each flip card -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="certificates\15.png" alt="Image 7">
+        </div>
+        <div class="card-face card-back">
+          <p>
+            <b>
+              Human Centered Design for Inclusive Innovation
+<br>University of Toronto<br>
+Issued:</b> Apr 2022<br>
+Credential ID P78K2NXYBRJACredential ID P78K2NXYBRJA<br>
+
+
+
+              <br>
+  <a href="https://www.coursera.org/account/accomplishments/certificate/P78K2NXYBRJA" color="blue"><b>Show credential</b>
+  </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat end -->
+
+
+
+    <!-- Repeat this block for each flip card -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="certificates\16.png" alt="Image 7">
+        </div>
+        <div class="card-face card-back">
+          <p>
+            <b>
+              Python Basics<br>
+University of Michigan<br>
+Issued:</b> Apr 2022<br>
+Credential ID 24LX4AZ5C6P8Credential ID 24LX4AZ5C6P8
+              <br>
+  <a href="https://www.coursera.org/account/accomplishments/certificate/24LX4AZ5C6P8" color="blue"><b>Show credential</b>
+  </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat end -->
+
+
+
+    <!-- Repeat this block for each flip card -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="certificates\18.png" alt="Image 7">
+        </div>
+        <div class="card-face card-back">
+          <p>
+            <b>
+              Python Projects <br>
+              Great Learning<br>
+              Issued: </b>Aug 2021            
+              <br>
+  <a href="https://olympus.mygreatlearning.com/courses/43775/certificate" color="blue"><b>Show credential</b>
+  </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat end -->
+
+
+
+    <!-- Repeat this block for each flip card -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="certificates\19.png" alt="Image 7">
+        </div>
+        <div class="card-face card-back">
+          <p>
+            <b>
+              Introduction to cyber security <br>
+Great Learning<br>
+Issued:</b> Jul 2021<br>
+
+
+
+
+              <br>
+  <a href="https://olympus.mygreatlearning.com/courses/31792/certificate" color="blue"><b>Show credential</b>
+  </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat end -->
+
+
+    <!-- Repeat this block for each flip card -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <img src="certificates\20.png" alt="Image 7">
+        </div>
+        <div class="card-face card-back">
+          <p>
+            <b>
+              Machine Learning & Data Science A-ZMachine Learning & Data Science A-Z
+
+<br>Udemy<br>
+Issued:</b> Jan 2021<br>
+
+
+
+
+              <br>
+  <a href="https://www.udemy.com/certificate/UC-d0ed195f-f233-4123-a6cf-f46580fe3503/" color="blue"><b>Show credential</b>
+  </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat end -->
+</div>
+
+<div class="menu-button" onmouseover="showMenu()" onmouseleave="hideMenu()">
+  <i class="fas fa-bars"></i>
+  <div class="menu-options" id="menuOptions">
+    <ul>
+      <li><a href="https://www.linkedin.com/in/anmol-r-srivastava/">LinkedIn</a></li>
+      <li><a href="https://github.com/arssite">Github</a></li>
+      <li><a href="https://www.instagram.com/ars_desibawa/">Instagram</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="toggle-theme" onclick="toggleTheme()">
+  <i id="themeIcon" class="fas fa-moon"></i>
+</div>
+
+<script>
+  function toggleTheme() {
+    var body = document.body;
+    var themeIcon = document.getElementById('themeIcon');
+    if (body.classList.contains('dark-theme')) {
+      body.classList.remove('dark-theme');
+      themeIcon.classList.remove('fa-sun');
+      themeIcon.classList.add('fa-moon');
+      body.style.background = "url('bgfl.avif') center/cover fixed";
+    } else {
+      body.classList.add('dark-theme');
+      themeIcon.classList.remove('fa-moon');
+      themeIcon.classList.add('fa-sun');
+      body.style.background = "url('bg3.jpg') center/cover fixed";
+    }
+  }
+
+  function showMenu() {
+    var menu = document.getElementById('menuOptions');
+    menu.style.display = 'block';
+  }
+
+  function hideMenu() {
+    var menu = document.getElementById('menuOptions');
+    menu.style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
