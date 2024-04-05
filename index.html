@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ars Licenses & Certificates</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -182,6 +183,28 @@ color:
   .toggle-theme i {
     font-size: 24px;
   }
+  /* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .card {
+    height: 400px;
+  }
+}
+
+/* Adjustments for even smaller screens */
+@media screen and (max-width: 480px) {
+  .navbar {
+    width: 90%;
+  }
+  
+  .card {
+    height: 300px;
+  }
+}
+
 
 </style>
 </head>
